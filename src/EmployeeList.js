@@ -7,7 +7,6 @@ class EmployeeList  extends React.Component {
         this.state = {  }
     }
     render() { 
-        console.log(this.props.data)
         return ( 
             <>
              <table className="table">

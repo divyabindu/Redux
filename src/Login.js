@@ -47,7 +47,7 @@ class Login extends React.Component {
     }
 
     validateEmail = (email) => {
-        var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var regex = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
         if (regex.test(email)) {
             return true;
           }
@@ -98,7 +98,6 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         token: state.credentials.token,
         data: state.credentials.data
